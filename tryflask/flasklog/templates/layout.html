@@ -9,25 +9,35 @@
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="http://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
     
     {% if title %}
-        <title>Flask Blog - {{ title }}</title>
+        <title>hystudio - {{ title }}</title>
     {% else %}
-        <title>Flask Blog</title>
+        <title>hystudio</title>
     {% endif %}
 </head>
 <body>
     <header class="site-header">
         <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
             <div class="container">
-                <a class="navbar-brand mr-4" href="/">Flask Blog</a>
+                <a id="icon" class="navbar-brand mr-4" href="{{ url_for('home') }}">HYSTUDIO</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarToggle">
                     <div class="navbar-nav mr-auto">
-                        <a class="nav-item nav-link" href="{{ url_for('home') }}">Home</a>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle nav-item nav-link" data-toggle="dropdown" href="#">Studio
+                                    <span class="caret"></span></a>
+                                <ul class="dropdown-menu">
+                                    <li><a href="{{ url_for('home') }}">View all</a></li>
+                                    <li><a href="#">Clothing</a></li>
+                                    <li><a href="#">Art&Design</a></li>
+                                </ul>
+                        </li>
                         <a class="nav-item nav-link" href="{{ url_for('about') }}">About</a>
                     </div>
                     <!-- Navbar Right Side -->
@@ -35,7 +45,7 @@
                         {% if current_user.is_authenticated %}
                         <a class="nav-item nav-link" href="{{ url_for('account') }}">Account</a>
                         <a class="nav-item nav-link" href="{{ url_for('logout') }}">Logout</a>
-                        <a class="nav-item nav-link" href="{{ url_for('new_post') }}">New Post</a>
+                        <a class="nav-item nav-link" href="{{ url_for('new_post') }}">Cart</a>
                         {% else %}
                         <a class="nav-item nav-link" href="{{ url_for('login') }}">Login</a>
                         <a class="nav-item nav-link" href="{{ url_for('register') }}">Register</a>
@@ -59,22 +69,28 @@
                 {% endwith %}
                 {% block content %}{% endblock %}
               </div>
-              <div class="col-md-4">
-                <div class="content-section">
-                  <h3>Our Sidebar</h3>
-                  <p class='text-muted'>You can put any information here you'd like.
-                    <ul class="list-group">
-                      <li class="list-group-item list-group-item-light">Latest Posts</li>
-                      <li class="list-group-item list-group-item-light">Announcements</li>
-                      <li class="list-group-item list-group-item-light">Calendars</li>
-                      <li class="list-group-item list-group-item-light">etc</li>
-                    </ul>
-                  </p>
-                </div>
-              </div>
             </div>
           </main>
 
+<footer id="contact" class="container-fluid text-center">
+      <div class="row">
+          <div class="col-sm-4">
+              <h3>Contact Me</h3>
+              <br>
+              <h4>homeyxue@outlook.com</h4>
+          </div>
+              <div class="col-sm-4">
+              <h3>Social Media</h3>
+              <a href="#wcDemo" class="fa fa-wechat" data-toggle="collapse"></a>
+              <div id="wcDemo" class="collapse">
+                  <img src="static/img/myQR.jpeg"style="width: 180px; height: 180px">
+              </div>
+              <a href="https://www.instagram.com/hong_syue/" class="fa fa-instagram"></a>
+              <a target="_blank" href="https://www.linkedin.com/in/hong-xue/" class="fa fa-linkedin"></a>
+              <a href="https://www.youtube.com/channel/UCYZ2orwp2fzZKOgzn6kkhnQ" class="fa fa-youtube"></a>
+              </div>
+      </div>
+</footer>
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>

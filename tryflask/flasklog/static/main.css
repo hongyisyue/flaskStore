@@ -1,4 +1,5 @@
 body {
+  background-color: #444444;
     height: 100%;
     width: 100%;
     margin: 0;
@@ -18,7 +19,7 @@ body {
     color: #FFF500;
   }
   .container{
-    margin-top: -20px;
+    margin-top: 90px;
   }
   .navbar-brand{
     min-height: 55px;
@@ -119,7 +120,7 @@ body {
   footer{
     width: 100%;
     background: #000000;
-    padding: 5% 5% 10% 5%;
+    padding: 5% 5% 5% 5%;
 }
 .fa{
     padding: 15px;

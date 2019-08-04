@@ -22,7 +22,7 @@
 <body>
     <header class="site-header">
         <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
-            <div class="container">
+            <div class="container-fluid">
                 <a id="icon" class="navbar-brand mr-4" href="{{ url_for('home') }}">HYSTUDIO</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -41,7 +41,7 @@
                         <a class="nav-item nav-link" href="{{ url_for('about') }}">About</a>
                     </div>
                     <!-- Navbar Right Side -->
-                    <div class="navbar-nav">
+                    <div class="navbar-nav topnav-right">
                         {% if current_user.is_authenticated %}
                         <a class="nav-item nav-link" href="{{ url_for('account') }}">Account</a>
                         <a class="nav-item nav-link" href="{{ url_for('logout') }}">Logout</a>
@@ -55,22 +55,21 @@
             </div>
         </nav>
     </header>
-    <main role="main" class="container">
-            <div class="row">
-              <div class="col-md-8">
+<main role="main">
+        <div>
                 {% with messages = get_flashed_messages(with_categories=true) %}
                     {% if messages %}
                         {% for category, message in messages %}
                             <div class="alert alert-{{ category }}">
-                                {{ message }}
+                                   {{ message }}
                             </div>
                         {% endfor %}
                     {% endif %}
                 {% endwith %}
                 {% block content %}{% endblock %}
-              </div>
-            </div>
-          </main>
+                </div>
+        </div>
+</main>
 
 <footer id="contact" class="container-fluid text-center">
       <div class="row">

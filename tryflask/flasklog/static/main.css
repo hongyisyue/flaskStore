@@ -25,9 +25,6 @@ body {
     min-height: 55px;
     padding: 10px 15px 5px;
 }
-  .topnav-right {
-    float: right;
-}
   .dropdown a{
     color: #444444;
   }

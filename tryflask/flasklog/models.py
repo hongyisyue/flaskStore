@@ -42,3 +42,35 @@ class Post(db.Model):
 
     def __repr__(self):
         return f"Post('{self.title}', '{self.date_posted}')"
+
+class Products(db.Model):
+    id = db.Column(db.Integer, primary_key=True)
+    title = db.Column(db.String(100), nullable=False)
+    image_file = db.Column(db.String(20), nullable=False, default='default.jpg')
+    price = db.Column(db.String(10), nullable=False)
+    content = db.Column(db.Text, nullable=False)
+    category = db.Column(db.String(20), nullable=False)
+
+    def __repr__(self):
+        return f"Products('{self.title}', '{self.price}', '{self.image_file}')"
+
+products = [
+    {
+        'title': 'designer T-shirt',
+        'price': '$35',
+        'content': 'A designer T-shirt based on the culture of Mid-Autumn festival',
+        'category': 'clothing'
+    },
+    {
+        'title': 'designer sweatshirt',
+        'price': '$50',
+        'content': 'A designer sweatshirt based on a childhood snack',
+        'category': 'clothing'
+    },
+    {
+        'title': 'designer T-shirt',
+        'price': '$35',
+        'content': 'A designer T-shirt based on the cartoon TINTIN ',
+        'category': 'clothing'
+    },
+]

@@ -85,6 +85,12 @@ def post(post_id):
     post = Post.query.get_or_404(post_id)
     return render_template('post.html', title=post.title, post=post)
 
+@app.route("/product/<int:post_id>")
+def product(post_id):
+    for product in products:
+        if product['id'] == post_id:
+            return render_template('product.html', title=product['title'], post=product)
+        
 
 @app.route("/post/<int:post_id>/update", methods=['GET', 'POST'])
 @login_required

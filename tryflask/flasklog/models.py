@@ -56,6 +56,7 @@ class Products(db.Model):
 
 products = [
     {
+        'id': 201901,
         'title': 'designer T-shirt',
         'price': '$35',
         'content': "A 100% ultra cotton designer T-shirt",
@@ -63,6 +64,7 @@ products = [
         'image_file': 'default.jpg'
     },
     {
+        'id': 201902,
         'title': 'designer T-shirt',
         'price': '$35',
         'content': 'A 100% ultra cotton designer T-shirt',
@@ -70,6 +72,7 @@ products = [
         'image_file': 'default.jpg'
     },
     {
+        'id': 201903,
         'title': 'designer T-shirt',
         'price': '$35',
         'content': 'A 100% ultra cotton designer T-shirt',
@@ -77,6 +80,7 @@ products = [
         'image_file': 'default.jpg'
     },
     {
+        'id': 201904,
         'title': 'designer sweatshirt',
         'price': '$50',
         'content': 'A fleece designer sweatshirt',
@@ -84,6 +88,7 @@ products = [
         'image_file': 'default.jpg'
     },
     {
+        'id': 201905,
         'title': 'designer sweatshirt',
         'price': '$50',
         'content': 'A fleece designer sweatshirt',
@@ -91,6 +96,7 @@ products = [
         'image_file': 'default.jpg'
     },
     {
+        'id': 201906,
         'title': 'designer sweatshirt',
         'price': '$50',
         'content': 'A fleece designer sweatshirt',

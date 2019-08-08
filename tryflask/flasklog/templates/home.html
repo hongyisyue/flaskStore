@@ -10,7 +10,7 @@
       <img class="img-thumbnail article-img" src="{{ url_for('static', filename='img/' + post.image_file) }}">
       <div class="media-body">
       <div class="article-metadata">
-      <a class="mr-2" href="#">{{ post.title }}</a>
+      <a class="mr-2" href="{{ url_for('product', post_id=post.id) }}">{{ post.title }}</a>
       <small class="text-muted">{{ post.price }}</small>
     </div>
 

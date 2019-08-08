@@ -1,14 +1,14 @@
 from flask import render_template, url_for, flash, redirect, request, abort
 from flasklog.forms import RegistrationForm, LoginForm, UpdateAccountForm, PostForm, RequestResetForm, ResetPasswordForm
 from flasklog import app, db, bcrypt, mail
-from flasklog.models import User, Post
+from flasklog.models import User, Post, products
 from flask_login import login_user, current_user, logout_user, login_required
 from flask_mail import Message
 
 @app.route('/')
 @app.route('/home')
 def home():
-    posts = Post.query.all()
+    posts = products
     return render_template('home.html', posts = posts)
 
 @app.route('/about')
@@ -116,11 +116,14 @@ def delete_post(post_id):
     flash('Your post has been deleted!', 'success')
     return redirect(url_for('home'))
 
-# @app.route("/user/<str:username>")
-# def user_cart():
-#     page = request
-#     posts = Post.query.all()
-#     return render_template('home.html', posts = posts)
+# @app.route("/user/<string:username>")
+# def user_orders(username):
+#     page = request.args.get('page', 1, type=int)
+#     user = User.query.filter_by(username=username).first_or_404()
+#     posts = Post.query.filter_by(author=user)\
+#         .order_by(Post.date_posted.desc())
+#     return render_template('user_orders.html', posts=posts, user=user)
+
 
 def send_reset_email(user: User):
     token = user.get_reset_token()

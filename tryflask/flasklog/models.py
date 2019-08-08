@@ -58,19 +58,43 @@ products = [
     {
         'title': 'designer T-shirt',
         'price': '$35',
-        'content': 'A designer T-shirt based on the culture of Mid-Autumn festival',
-        'category': 'clothing'
-    },
-    {
-        'title': 'designer sweatshirt',
-        'price': '$50',
-        'content': 'A designer sweatshirt based on a childhood snack',
-        'category': 'clothing'
+        'content': "A 100% ultra cotton designer T-shirt",
+        'category': 'clothing',
+        'image_file': 'default.jpg'
     },
     {
         'title': 'designer T-shirt',
         'price': '$35',
-        'content': 'A designer T-shirt based on the cartoon TINTIN ',
-        'category': 'clothing'
+        'content': 'A 100% ultra cotton designer T-shirt',
+        'category': 'clothing',
+        'image_file': 'default.jpg'
     },
+    {
+        'title': 'designer T-shirt',
+        'price': '$35',
+        'content': 'A 100% ultra cotton designer T-shirt',
+        'category': 'clothing',
+        'image_file': 'default.jpg'
+    },
+    {
+        'title': 'designer sweatshirt',
+        'price': '$50',
+        'content': 'A fleece designer sweatshirt',
+        'category': 'clothing',
+        'image_file': 'default.jpg'
+    },
+    {
+        'title': 'designer sweatshirt',
+        'price': '$50',
+        'content': 'A fleece designer sweatshirt',
+        'category': 'clothing',
+        'image_file': 'default.jpg'
+    },
+    {
+        'title': 'designer sweatshirt',
+        'price': '$50',
+        'content': 'A fleece designer sweatshirt',
+        'category': 'clothing',
+        'image_file': 'default.jpg'
+    }
 ]
